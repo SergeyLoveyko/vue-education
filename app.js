@@ -1,7 +1,8 @@
 const App = {
   data() {
     return {
-      title: 'Список заметок'
+      title: 'Список заметок',
+      placeholder: 'Введите название заметки'
     }
   }
 }
