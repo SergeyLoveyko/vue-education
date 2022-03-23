@@ -13,7 +13,7 @@
         <h1>{{ title }}: {{ counter }}</h1>
         <div>
           <button class="btn primary" v-on:click="counter++">Добавить</button>
-          <button class="btn danger">Вычесть</button>
+          <button class="btn danger" v-on:click="counter = counter - 1">Вычесть</button>
         </div>
       </div>
     </div>
