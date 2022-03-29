@@ -5,6 +5,11 @@ const App = {
       placeholderString: 'Введите название заметки',
       inputValue: ''
     }
+  },
+  methods: {
+    inputChangeHandler() {
+      this.inputValue = event.target.value;
+    }
   }
 }
 
