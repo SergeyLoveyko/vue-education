@@ -3,7 +3,8 @@ const App = {
     return {
       title: 'Список заметок',
       placeholderString: 'Введите название заметки',
-      inputValue: ''
+      inputValue: '',
+      notes: ['Заметка 1', 'Заметка 2', 'Заметка 37']
     }
   },
   methods: {
