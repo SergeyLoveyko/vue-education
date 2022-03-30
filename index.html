@@ -25,7 +25,7 @@
         <ul class="list">
           <li class="list-item" v-for="(note, index) in notes">
             ({{ index + 1 }}) {{ note }}
-            <button class="btn danger" v-on:click="removeNote">Удалить</button>
+            <button class="btn danger" v-on:click="removeNote(index, $event)">Удалить</button>
           </li>
         </ul>
       </div>

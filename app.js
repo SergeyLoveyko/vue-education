@@ -15,8 +15,8 @@ const App = {
       this.notes.push(this.inputValue);
       this.inputValue = '';
     },
-    removeNote() {
-      console.log('removeNote');
+    removeNote(index, event) {
+      console.log('removeNote', index, event);
     }
   }
 }
