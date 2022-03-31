@@ -28,6 +28,7 @@
             <button class="btn danger" v-on:click="removeNote(index)">Удалить</button>
           </li>
         </ul>
+        <div v-if="notes.length === 0">Заметок пока нет. Добавьте первую</div>
       </div>
     </div>
 
