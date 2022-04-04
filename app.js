@@ -29,6 +29,11 @@ const App = {
       console.log('doubleCount');
       return this.notes.length * 2;
     },
+  },
+  watch: {
+    inputValue(value) {
+      console.log('input value changed', value);
+    }
   }
 }
 
