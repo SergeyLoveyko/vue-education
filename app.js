@@ -17,6 +17,10 @@ const App = {
         this.inputValue = '';
       }
     },
+    doubleCount() {
+      console.log('doubleCount');
+      return this.notes.length * 2;
+    },
     toUpperCase(item) {
       return item.toUpperCase();
     },
