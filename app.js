@@ -27,6 +27,12 @@ const App = {
     removeNote(index) {
       this.notes.splice(index, 1);
     }
+  },
+  computed: {
+    doubleCountComputed() {
+      console.log('doubleCount');
+      return this.notes.length * 2;
+    },
   }
 }
 
