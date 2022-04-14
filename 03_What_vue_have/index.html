@@ -29,8 +29,8 @@
         <!-- <li class="list-item" v-for="(item, i) in 7">
           <strong>{{ i }}</strong> {{ item }}
         </li> -->
-        <li class="list-item" v-for="value in person">
-          {{ value }}
+        <li class="list-item" v-for="(value, key) in person">
+          <strong>{{ key }} </strong> {{ value }}
         </li>
       </ul>
 
