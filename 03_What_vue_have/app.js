@@ -10,9 +10,10 @@ Vue.createApp({
     items: [1, 2]
   }),
   methods: {
-    addItem() {
+    addItem(event) {
       this.items.unshift(this.$refs.myInput.value);
       this.$refs.myInput.value = '';
+      console.log(event.key);
     }
   },
   computed: {
