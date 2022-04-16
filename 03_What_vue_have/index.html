@@ -26,7 +26,7 @@
       </button> -->
 
       <div class="form-control">
-        <input type="text" @keyup.enter="addItem($event)" ref="myInput">
+        <input type="text" @keyup.shift.enter="addItem($event)" ref="myInput">
       </div>
 
       <ul class="list" v-if="items.length">
