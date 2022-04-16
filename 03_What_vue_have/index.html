@@ -26,7 +26,7 @@
       </button> -->
 
       <div class="form-control">
-        <input type="text" @keyup="addItem" ref="myInput">
+        <input type="text" @keyup.enter="addItem" ref="myInput">
       </div>
 
       <ul class="list" v-if="items.length">
