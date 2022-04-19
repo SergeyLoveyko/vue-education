@@ -7,7 +7,7 @@ const app = Vue.createApp({
   template: `
     <div class="card center">
       <h1>{{ title }}</h1>
-      <button class="btn">Изменить</button>
+      <button class="btn" @click="title = 'Новое название!'">Изменить</button>
     </div>
     `
 });
