@@ -6,6 +6,11 @@ const app = Vue.createApp({
       title: 'Это из свойства template'
     }
   },
+  methods: {
+    changeTitle() {
+      this.title = 'Изменили!'
+    }
+  },
   // template: `
   //   <div class="card center">
   //     <h1>{{ title }}</h1>
@@ -18,7 +23,8 @@ const app = Vue.createApp({
     }, [
       h('h1', {}, this.title),
       h('button', {
-        class: 'btn'
+        class: 'btn',
+        onClick: this.changeTitle
       }, 'Изменить')]);
   }
 });
