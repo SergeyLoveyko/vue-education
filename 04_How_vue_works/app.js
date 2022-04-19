@@ -12,7 +12,11 @@ const app = Vue.createApp({
   //     <button class="btn" @click="title = 'Новое название!'">Изменить</button>
   //   </div>
   // `
-  
+  render() {
+    return h('div', {
+      class: 'card center'
+    }, 'This is text content');
+  }
 });
 
 app.mount('#app');
