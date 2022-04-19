@@ -15,7 +15,7 @@ const app = Vue.createApp({
   render() {
     return h('div', {
       class: 'card center'
-    }, h('h1', {}, 'test'));
+    }, h('h1', {}, this.title));
   }
 });
 
