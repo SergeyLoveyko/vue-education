@@ -33,7 +33,8 @@
         <li 
             class="list-item" 
             v-for="(item, i) in items"
-            @click.right.prevent="items.splice(i, 1)"
+            @clic.right.prevent="items.splice(i, 1)"
+            @click.right.prevent="remove(i), log(item)"
             :key="item"
         >
           <strong>{{ item }}</strong>&nbsp
