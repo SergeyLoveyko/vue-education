@@ -8,6 +8,7 @@ const app = Vue.createApp({
   },
   methods: {
     changeTitle() {
+      console.log(this.title);
       this.title = 'Изменили!'
     }
   },
