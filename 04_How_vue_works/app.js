@@ -60,6 +60,14 @@ app.mount('#app');
 //   app.unmount();
 // }, 2000);
 
+Vue.createApp({
+  data() {
+    return {
+      title: 'New Title Two'
+    }
+  }
+}).mount('#app2');
+
 
 //  ===========
 
