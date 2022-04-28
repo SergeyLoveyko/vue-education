@@ -112,6 +112,10 @@ h3 {
     max-width: 1000px;
 }
 
+.mt-2 {
+    margin-top: 2rem;
+}
+
 .pt-5 {
     padding-top: 5rem;
 }
