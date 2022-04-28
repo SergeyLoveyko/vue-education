@@ -27,6 +27,9 @@ const app = Vue.createApp({
         class: 'btn',
         onClick: this.changeTitle
       }, 'Изменить')]);
+  },
+  beforeCreate() {
+    console.log('beforeCreate');
   }
 });
 
@@ -72,4 +75,4 @@ const proxy = new Proxy(data, {
 });
 
 proxy.title = 'Angular 10';
-console.log(proxy);
+// console.log(proxy);
