@@ -50,6 +50,7 @@ const App = {
     setActive(idx) {
       // когда нажимаем на определенный шаг
       this.activeIndex = idx;
+      console.log(this.activeIndex);
     }
   },
   computed: {
