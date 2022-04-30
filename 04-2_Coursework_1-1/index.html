@@ -29,10 +29,10 @@
             {{ step.title }}
           </li>
         </ul>
-        <div v-if="indexReset < 6">
+        <div v-if="isActive">
           <button 
               class="btn"
-              :class="{'disabled' : activeIndex === 0}"
+              :disabled="prevDisabled"
               @click="prev"
           > 
             Назад
@@ -40,19 +40,11 @@
           <button 
               class="btn primary" 
               @click="nextOfFinish"
-              v-if="indexReset < 5"
           >
-            Вперед
-          </button>
-          <button 
-              class="btn primary" 
-              @click="nextOfFinish"
-              v-if="indexReset > 4"
-          >
-           Закончить
+            {{ isLastStep ? 'Закончить' : 'Вперед' }}
           </button>
         </div>
-        <div v-if="indexReset > 5">
+        <div v-else>
           <button class="btn" @click="reset">Начать заново</button>
         </div>
       </div>
