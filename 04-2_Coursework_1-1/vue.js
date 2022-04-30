@@ -49,13 +49,14 @@ const App = {
     },
     setActive(idx) {
       // когда нажимаем на определенный шаг
+      this.activeIndex = idx;
     }
   },
   computed: {
     // тут стоит определить несколько свойств:
     // 1. текущий выбранный шаг
     activeStep() {
-      return this.steps[this.activeIndex]
+      return this.steps[this.activeIndex];
     }
     // 2. выключена ли кнопка назад
     // 3. находимся ли мы на последнем шаге
