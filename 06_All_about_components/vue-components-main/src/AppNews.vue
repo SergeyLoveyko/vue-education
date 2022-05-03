@@ -10,9 +10,24 @@
 export default {
   // props: ['title'],
   props: {
-    title: String,
-    id: Number,
-    isOpen: Boolean
+    title: {
+      type: String,
+      required: true,  // можем установить, является ли 'title' обязательным параметром
+    },
+    id: {
+      type: Number,
+      required: true
+    },
+    isOpen: {
+      type: Boolean,
+      required: false,  //  если параметр не обязательный, задаём дефолтный (ниже)
+      default: false,
+      validator(value) {
+        console.log(value)
+        // return false
+        return value === true || value === false
+      }
+    }
   },
   data() {
     return {
