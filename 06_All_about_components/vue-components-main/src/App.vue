@@ -4,8 +4,11 @@
       <h2>Актуальные новости {{ now }}</h2>
     </div>
 
-    <app-news titleTwo="This is title number one"></app-news>
-    <app-news titleTwo="This is title number two"></app-news>
+    <app-news
+        v-for="item in news"
+        :key="item"
+        :title="item"
+    ></app-news>
   </div>
 </template>
 
