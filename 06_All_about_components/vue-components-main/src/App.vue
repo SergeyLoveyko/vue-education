@@ -8,6 +8,8 @@
         v-for="item in news"
         :key="item.id"
         :title="item.title"
+        :id="item.id"
+        :is-open="item.isOpen"
     ></app-news>
   </div>
 </template>
@@ -21,11 +23,13 @@ export default {
       news: [
         {
           title: 'Джо Байден победил на выборах в США',
-          id: 1
+          id: 1,
+          isOpen: false
         },
         {
           title: 'Vue 3 успешно работает',
-          id: 2
+          id: 2,
+          isOpen: false
         }
       ]
     }

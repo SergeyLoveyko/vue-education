@@ -1,8 +1,8 @@
 <template>
   <div class="card">
     <h3>{{ title }}</h3>
-    <button class="btn" @click="isOpen = !isOpen">Открыть</button>
-    <p v-if="isOpen">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iusto perferendis, dolor doloribus rem mollitia.</p>
+    <button class="btn" @click="isOpenOld = !isOpenOld">Открыть</button>
+    <p v-if="isOpenOld">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iusto perferendis, dolor doloribus rem mollitia.</p>
   </div>
 </template>
 
@@ -10,11 +10,13 @@
 export default {
   // props: ['title'],
   props: {
-    title: String
+    title: String,
+    id: Number,
+    isOpen: Boolean
   },
   data() {
     return {
-      isOpen: false
+      isOpenOld: false
     }
   }
 }
