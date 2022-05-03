@@ -4,8 +4,8 @@
       <h2>Актуальные новости {{ now }}</h2>
     </div>
 
-    <app-news></app-news>
-    <AppNews />
+    <app-news titleTwo="This is title number one"></app-news>
+    <app-news titleTwo="This is title number two"></app-news>
   </div>
 </template>
 
@@ -15,7 +15,6 @@ export default {
   data() {
     return {
       now: new Date().toLocaleDateString(),
-      isOpen: false,
       news: [
         'Джо Байден победил на выборах в США',
         'Vue 3 успешно работает'
