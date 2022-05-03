@@ -6,8 +6,8 @@
 
     <app-news
         v-for="item in news"
-        :key="item"
-        :title="item"
+        :key="item.id"
+        :title="item.title"
     ></app-news>
   </div>
 </template>
@@ -19,8 +19,14 @@ export default {
     return {
       now: new Date().toLocaleDateString(),
       news: [
-        'Джо Байден победил на выборах в США',
-        'Vue 3 успешно работает'
+        {
+          title: 'Джо Байден победил на выборах в США',
+          id: 1
+        },
+        {
+          title: 'Vue 3 успешно работает',
+          id: 2
+        }
       ]
     }
   },
