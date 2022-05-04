@@ -1,8 +1,10 @@
 <template>
   <div class="card">
     <h3>{{ title }}</h3>
-    <button class="btn" @click="isOpenOld = !isOpenOld">Открыть</button>
-    <p v-if="isOpenOld">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iusto perferendis, dolor doloribus rem mollitia.</p>
+    <button class="btn" @click="open">
+      {{ isNewOpen ? 'Закрыть' : 'Открыть' }}
+    </button>
+    <p v-if="isNewOpen">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iusto perferendis, dolor doloribus rem mollitia.</p>
   </div>
 </template>
 
@@ -23,7 +25,7 @@ export default {
       required: false,  //  если параметр не обязательный, задаём дефолтный (ниже)
       default: false,
       validator(value) {
-        console.log(value)
+        // console.log(value)
         // return false
         return value === true || value === false
       }
@@ -31,7 +33,15 @@ export default {
   },
   data() {
     return {
-      isOpenOld: false
+      isNewOpen: this.isOpen
+    }
+  },
+  methods: {
+    open() {
+      this.isNewOpen = !this.isNewOpen
+      if(this.isNewOpen) {
+        this.$emit('open-news')      //  Минимум 1 аргумент до бусконечности
+      }
     }
   }
 }
