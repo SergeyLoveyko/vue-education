@@ -31,7 +31,17 @@ export default {
       }
     }
   },
-  emits: ['open-news'],    //  нужен для других разработчиков
+  // emits: ['open-news'],    //  нужен для других разработчиков
+  emits: {
+    // 'open-news': null      //  если не хотим валидировать
+    'open-news'(num) {
+      if (num) {
+        return true
+      }
+      console.warn('No data in open-news emit')
+      return false
+    }
+  },
   data() {
     return {
       isNewOpen: this.isOpen
