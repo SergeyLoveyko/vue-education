@@ -31,6 +31,7 @@ export default {
       }
     }
   },
+  emits: ['open-news'],    //  нужен для других разработчиков
   data() {
     return {
       isNewOpen: this.isOpen
